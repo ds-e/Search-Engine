@@ -1,3 +1,5 @@
+Travail d'équipe
+
 Pour ce TP, nous avons décidé d'utiliser des ArrayList pour stocker les mots et leur fréquence. 
 Même si les LinkedList sont préférables pour ajouter et enlever des éléments, les ArrayList sont plus efficaces pour la recherche, qui est le but de cet exercice.
 	
