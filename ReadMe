@@ -1,0 +1,36 @@
+Pour ce TP, nous avons décidé d'utiliser des ArrayList pour stocker les mots et leur fréquence. 
+Même si les LinkedList sont préférables pour ajouter et enlever des éléments, les ArrayList sont plus efficaces pour la recherche, qui est le but de cet exercice.
+	
+Les panneaux d’indexation et d’affichage:
+
+Administrateur
+Le panneau d’index du document est seulement pour l'utilisation de l’administrateur. 
+Il est constitué d’une liste qui montre les documents déjà indexés et une autre liste pour montrer les mots et fréquences contenues dans un document indexé sélectionné dans la première liste. 
+Cette interface contient aussi un bouton pour mettre à jour l’index des documents. 
+
+Usager 
+Le panneau destiné à la recherche est conçu pour l'utilisateur. Il permet de lancer une recherche à partir d’une phrase (un mot est aussi une phrase) introduite dans un textBox. 
+Nous avons capturé la phrase, puis en la séparant par mot, avec la même méthode que pour procéder les textes pour assurer une bonne corrélation. 
+Avec ce texte nous avons lancé une recherche sur la liste de document indexés pour trouver les documents qui contiennent les mots comme décrit dans l'énoncé. 
+La liste des “documents réponses" (les documents qui contiennent tous les mots entrés par l’utilisateur) apparaîtront en dessous. 
+Lorsqu’un document est sélectionné, il sera affiché à droite. 
+Les mots qui ont été recherchés seront chacuns surlignés d’une couleur différente (bonus, si on recherche “layer” par exemple, la partie multilayer sera surlignée mais ne compte pas dans la fréquence).
+	
+
+
+Structure des paquages:
+
+Le ‘package’ frame contient l'interface graphique, les deux fenêtres User et Admin. 
+Le package model contient toutes les classes de gestion d’information (e.g. IndexMot pour l'indexation des mots et IndexDoc pour l'indexation inverse) ainsi que la classe principale (Main). 
+Le package ressources contient tous les documents qui vont êtres utilisés pour la recherche.
+Un liste d’index de document est créée au lancement de l’application. 
+Chaque document (*.txt ) lu est importé dans une référence. 
+	 
+Le package library regroupe les choses utiles comme:
+-la méthode creerTokens() puisqu’elle est utilisée dans plusieurs classes
+-les méthodes pour les stopwords (si un mot qui n’est pas util est écrit un message apparaitra et la recherche ne sera pas effectuée si c'est juste un mot, ou elle le sera mais ce mot ne compte pas dans la recherche).
+-la méthode pour surligner les mots
+	
+	
+
+L'application est lancée à partir de la classe Main.
